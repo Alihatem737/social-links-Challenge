@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Social links profile</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body{
+      background-color: black;
+      font-family: Inter;
+    }
+    
+    .container{
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: black;
+    }
+
+    .card{
+      width: 90%;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      background-color: #1F1F1F;
+      border-radius: 15px;
+      align-items: center;
+      margin: auto;
+      padding: 40px 35px;
+      
+      
+    }
+
+
+    .image{
+      
+      width: 88px;
+  height: 88px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .name{
+      color: #FFFFFF;
+      font-weight: 600;
+      margin-bottom: auto;
+      
+    }
+
+    .location{
+      color: #C4E052;
+      font-weight: 600;
+      margin: 10px auto 5px auto;
+      font-size: 14px;
+    }
+
+    .description{
+      color: #FFFFFF;
+      font-weight: 400;
+    }
+
+
+    .social{
+      margin-top: 20px;
+      
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 98%; 
+    }
+
+
+    button{
+      background-color:hsl(0, 0%, 20%);
+      color: #F6F6F6;
+      border-radius: 12px;
+      padding: 18px 0 ;
+      width: 100%;
+      cursor: pointer; 
+      font-weight: 600;
+      font-size: 17px;
+      border: none;
+      gap: 10px;
+      
+    }
+
+
+    button:hover {
+  background-color: #C4E052;
+  color: #000000;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+
+
+<div class="container">
+  <div class="card">
+    <img src="assets/images/avatar-jessica.jpeg" alt="avatar-jessica" class="image">
+
+    <h2 class="name">Jessica Randall</h1>
+    <p class="location">London, United Kingdom</p>
+    <p class="description">"Front-end developer and avid reader."</p>
+
+
+    <div class="social">
+      <button>GitHub</button>
+      <button>Frontend Mentor</button>
+      <button>LinkedIn</button>
+      <button>Twitter</button>
+      <button>Instagram</button>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+</body>
+</html>
