@@ -7,86 +7,112 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Social links profile</title>
 
   <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    :root {
+      --color-bg: #000000;
+      --color-card: #1F1F1F;
+      --color-btn: hsl(0, 0%, 20%);
+      --color-btn-hover: #C4E052;
+      --color-text: #FFFFFF;
+      --color-location: #C4E052;
+      --color-description: #FFFFFF;
+      --radius-card: 0.9375rem;
+      --radius-btn: 0.75rem;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
-      background-color: black;
+      background-color: var(--color-bg);
       font-family: 'Inter', sans-serif;
-      margin: 0;
     }
-    
+
     .container {
       display: flex;
       justify-content: center;
       min-height: 100vh;
-      background-color: black;
+      background-color: var(--color-bg);
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
     }
 
     .card {
       width: 90%;
-      max-width: 360px;
+      max-width: clamp(20rem, 90%, 24rem);
       display: flex;
       flex-direction: column;
-      background-color: #1F1F1F;
-      border-radius: 15px;
+      background-color: var(--color-card);
+      border-radius: var(--radius-card);
       align-items: center;
-      margin: auto;
-      padding: 40px 35px;
+      padding: 2rem 1.75rem;
     }
 
     .image {
-      width: 88px;
-      height: 88px;
+      width: 6rem;
+      height: 6rem;
       border-radius: 50%;
       object-fit: cover;
     }
 
     .name {
-      color: #FFFFFF;
+      color: var(--color-text);
       font-weight: 600;
+      font-size: 1.5rem;
+      margin-top: 1rem;
       margin-bottom: 0;
     }
 
     .location {
-      color: #C4E052;
+      color: var(--color-location);
       font-weight: 600;
-      margin: 10px auto 5px auto;
-      font-size: 14px;
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
     }
 
     .description {
-      color: #FFFFFF;
+      color: var(--color-description);
       font-weight: 400;
+      font-size: 0.875rem;
+      margin-top: 0.75rem;
+      text-align: center;
     }
 
     .social {
-      margin-top: 20px;
+      margin-top: 1.25rem;
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      width: 98%;
+      gap: 0.75rem;
+      width: 100%;
     }
 
     button {
-      background-color: hsl(0, 0%, 20%);
-      color: #F6F6F6;
-      border-radius: 12px;
-      padding: 18px 0;
+      background-color: var(--color-btn);
+      color: var(--color-text);
+      border-radius: var(--radius-btn);
+      padding: 1rem 0;
       width: 100%;
       cursor: pointer;
       font-weight: 600;
-      font-size: 17px;
+      font-size: 1rem;
       border: none;
+      transition: background-color 0.2s, color 0.2s;
     }
 
     button:hover {
-      background-color: #C4E052;
+      background-color: var(--color-btn-hover);
       color: #000000;
     }
   </style>
@@ -94,22 +120,22 @@
 <body>
 
 <div class="container">
-  <div class="card">
-    <img src="assets/images/avatar-jessica.jpeg" alt="Jessica Randall avatar" class="image">
+  <main>
+    <div class="card">
+      <img src="assets/images/avatar-jessica.jpeg" alt="Jessica Randall avatar" class="image">
+      <h1 class="name">Jessica Randall</h1>
+      <p class="location">London, United Kingdom</p>
+      <p class="description">"Front-end developer and avid reader."</p>
 
-    <h2 class="name">Jessica Randall</h2>
-    <p class="location">London, United Kingdom</p>
-    <p class="description">"Front-end developer and avid reader."</p>
-
-    <div class="social">
-      <button>GitHub</button>
-      <button>Frontend Mentor</button>
-      <button>LinkedIn</button>
-      <button>Twitter</button>
-      <button>Instagram</button>
+      <div class="social">
+        <button>GitHub</button>
+        <button>Frontend Mentor</button>
+        <button>LinkedIn</button>
+        <button>Twitter</button>
+        <button>Instagram</button>
+      </div>
     </div>
-
-  </div>
+  </main>
 </div>
 
 </body>
