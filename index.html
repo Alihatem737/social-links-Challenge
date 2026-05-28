@@ -19,7 +19,6 @@
       --color-btn-hover: #C4E052;
       --color-text: #FFFFFF;
       --color-location: #C4E052;
-      --color-description: #FFFFFF;
       --radius-card: 0.9375rem;
       --radius-btn: 0.75rem;
     }
@@ -71,27 +70,27 @@
       color: var(--color-text);
       font-weight: 600;
       font-size: 1.5rem;
-      margin-top: 1rem;
-      margin-bottom: 0;
+      margin-block-end: 0;
+      margin-block-start: 1rem;
     }
 
     .location {
       color: var(--color-location);
       font-weight: 600;
-      margin-top: 0.5rem;
+      margin-block-start: 0.5rem;
       font-size: 0.875rem;
     }
 
     .description {
-      color: var(--color-description);
+      color: var(--color-text);
       font-weight: 400;
       font-size: 0.875rem;
-      margin-top: 0.75rem;
+      margin-block-start: 0.75rem;
       text-align: center;
     }
 
     .social {
-      margin-top: 1.25rem;
+      margin-block-start: 1.25rem;
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
@@ -113,7 +112,13 @@
 
     button:hover {
       background-color: var(--color-btn-hover);
-      color: #000000;
+      color: var(--color-bg);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      button {
+        transition: none;
+      }
     }
   </style>
 </head>
@@ -128,11 +133,11 @@
       <p class="description">"Front-end developer and avid reader."</p>
 
       <div class="social">
-        <button>GitHub</button>
-        <button>Frontend Mentor</button>
-        <button>LinkedIn</button>
-        <button>Twitter</button>
-        <button>Instagram</button>
+        <button type="button">GitHub</button>
+        <button type="button">Frontend Mentor</button>
+        <button type="button">LinkedIn</button>
+        <button type="button">Twitter</button>
+        <button type="button">Instagram</button>
       </div>
     </div>
   </main>
